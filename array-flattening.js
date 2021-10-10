@@ -14,3 +14,4 @@ console.log(rec(aa));
 
 console.log(aa.flat(3)); //ES10 flat method, here if you dont pass an argument then by default flat method will
                         //flatten the array only 1 level deep.
+                        //also Check out ES10 flatMaps() method.
