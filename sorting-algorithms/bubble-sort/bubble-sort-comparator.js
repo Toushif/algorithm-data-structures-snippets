@@ -11,6 +11,9 @@
 // The default comparator you provide should assume that the two parameters are
 // numbers and that we are sorting the values from smallest to largest.
 
+// Time complexity - Best case - O(n) //For nearly sorted array
+// Time complexity - Average/Worst case - O(n^2) //For randomly sorted array
+
 function bubbleSort(arr, comparator) {
     if (typeof comparator !== "function") {
         comparator = (a, b) => {
