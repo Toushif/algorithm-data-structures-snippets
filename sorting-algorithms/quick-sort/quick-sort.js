@@ -1,6 +1,9 @@
 // Quick sort
 // Quick sort is an O(n * log(n)) algorithm (Worst case - O(n^2).
-// Pivot is always the first element
+// Pivot may not always be the first element, coz if the array is nearly sorted then selecting
+// first item as the pivot will give the worst time complexity of O(n^2)
+// So, always select a random pivot from the array when beginning pr try and pick the middle element everytime
+// if you use Quick Sort. But in any case we cannot avoid the worst case entirely.
 
 function pivot(arr, start = 0, end = arr.length - 1) {
     let pivotIndex = start;
@@ -33,5 +36,6 @@ const nums = [
     4, 3, 5, 3, 43, 232, 4, 34, 232, 32, 4, 35, 34, 23, 2, 453, 546, 75, 67,
     4342, 32,
 ];
+
 console.log(quickSort(nums)); // [2, 3, 3, 4, 4, 4, 5, 23, 32, 32, 34, 34, 35, 43, 67, 75, 232, 232, 453, 546, 4342]
 console.log(quickSort([])); // []
