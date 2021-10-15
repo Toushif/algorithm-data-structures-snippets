@@ -1,14 +1,11 @@
 Function.prototype.bind = function (obj) {
-    var func = this;
-
-    var additionalArgs = [].slice.call(arguments, 1);
-
-    var args = arguments;
+    let func = this;
+    let additionalArgs = [].slice.call(arguments, 1);
+    let args = arguments;
 
     return function () {
-        var currentArgs = [].slice.call(arguments);
-
-        var combinedArgs = [].concat.call(additionalArgs, currentArgs);
+        let currentArgs = [].slice.call(arguments);
+        let combinedArgs = [].concat.call(additionalArgs, currentArgs);
 
         console.log(
             "combinedArgs",
