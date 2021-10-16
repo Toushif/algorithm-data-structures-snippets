@@ -48,10 +48,13 @@ function radixSort(nums) {
         const helperArr = Array.from({ length: 10 }, () => []);
 
         for (const num of nums) {
+            // console.log('check', helperArr)
             helperArr[getDigit(num, i)].push(num);
+            // console.log('check 2', helperArr)
         }
 
         nums = [].concat(...helperArr);
+        // console.log('check 3', nums)
     }
 
     return nums;
@@ -62,4 +65,4 @@ console.log(radixSort([10, 100, 1, 1000, 10000000])); // [1, 10, 100, 1000, 1000
 console.log(
     radixSort([902, 4, 7, 408, 29, 9637, 1556, 3556, 8157, 4386, 86, 593])
 );
-// [4, 7, 29, 86, 408, 593, 902, 1556, 3556, 4386, 8157, 9637]
+[4, 7, 29, 86, 408, 593, 902, 1556, 3556, 4386, 8157, 9637];

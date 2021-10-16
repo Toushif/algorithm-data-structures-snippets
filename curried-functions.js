@@ -39,20 +39,44 @@ $ (7)            // 7
   (mult (2))     // * 2 = 256
   (console.log)  // 256
 
-  //Partial application
 
-  const partial = (f, ...a) => (...b) =>
-  f (...a, ...b)
+//Partial application
 
-const add3 = (x, y, z) =>
-  x + y + z
+const partial = (f, ...a) => (...b) => f(...a, ...b)
 
-partial (add3) (1, 2, 3)   // 6
+const add3 = (x, y, z) => x + y + z
 
-partial (add3, 1) (2, 3)   // 6
+partial(add3) (1, 2, 3)   // 6
 
-partial (add3, 1, 2) (3)   // 6
+partial(add3, 1) (2, 3)   // 6
 
-partial (add3, 1, 2, 3) () // 6
+partial(add3, 1, 2) (3)   // 6
 
-partial (add3, 1, 1, 1, 1) (1, 1, 1, 1, 1) // 3
+partial(add3, 1, 2, 3) () // 6
+
+partial(add3, 1, 1, 1, 1) (1, 1, 1, 1, 1) // 3
+
+
+// Write a sum method which will work properly when invoked using either syntax below.
+// console.log(sum(2,3));   // Outputs 5
+// console.log(sum(2)(3));  // Outputs 5
+
+// METHOD 1
+function sum(x) {
+  if (arguments.length == 2) {
+    return arguments[0] + arguments[1];
+  } else {
+    return function(y) { return x + y; };
+  }
+}
+
+// METHOD 2
+function sum(x, y) {
+  if (y !== undefined) {
+    return x + y;
+  } else {
+    return function(y) { return x + y; };
+  }
+}
+
+// Method 3 -> Use partial function currying as shown above
