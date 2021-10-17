@@ -114,6 +114,7 @@ class SinglyLinkedList{
         prev = node;
         node = next;
       }
+      console.log('check 1', this.tail, this.head)
       return this;
     }
     print(){
@@ -134,3 +135,6 @@ list.push(201)
 list.push(250)
 list.push(350)
 list.push(999)
+list.print()
+list.reverse()
+list.print()
