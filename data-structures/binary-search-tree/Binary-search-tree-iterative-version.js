@@ -376,6 +376,11 @@ console.log(binarySearchTree1.root.left.right.data); // 13
 console.log(binarySearchTree1.root.left.left.data); // 8
 console.log(binarySearchTree1.getHeight()); // 3
 console.log(binarySearchTree1.isBalanced()); // true
+console.log(binarySearchTree1.root); 
+console.log(binarySearchTree1.breadthFirstSearch()); // [ 15, 12, 20, 8, 13 ]
+console.log(binarySearchTree1.depthFirstSearchPreOrder()); // [ 15, 12, 8, 13, 20 ]
+console.log(binarySearchTree1.depthFirstSearchPostOrder()); // [ 8, 13, 12, 20, 15 ]
+console.log(binarySearchTree1.depthFirstSearchInOrder()); // [ 8, 12, 13, 15, 20 ]
 
 const binarySearchTree2 = new BinarySearchTree();
 binarySearchTree2.insert(22).insert(49).insert(85).insert(66).insert(95).insert(90).insert(100).insert(88).insert(93).insert(89);
