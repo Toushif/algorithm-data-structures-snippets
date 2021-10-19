@@ -84,7 +84,7 @@ class Graph {
     const result = [];
     const visited = {};
 
-    function traverse(vertex) {
+    (function traverse(vertex) {
       if (!self.adjacencyList[vertex]) return;
 
       result.push(vertex);
@@ -93,9 +93,7 @@ class Graph {
       for (const linkedVertex of self.adjacencyList[vertex]) {
         if (!visited[linkedVertex.value]) traverse(linkedVertex.value);
       }
-    }
-
-    traverse(start);
+    })(start);
 
     return result;
   }
