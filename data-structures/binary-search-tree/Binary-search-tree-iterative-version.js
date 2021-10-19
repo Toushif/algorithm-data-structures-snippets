@@ -365,7 +365,7 @@ class BinarySearchTree {
 
 const binarySearchTree1 = new BinarySearchTree();
 
-binarySearchTree1.insert(15).insert(20).insert(10).insert(12).insert(8).insert(13);
+binarySearchTree1.insert(15).insert(20).insert(10).insert(12).insert(8).insert(13).insert(25).insert(18);
 console.log('min', binarySearchTree1.findMin().data); // 8
 console.log('max', binarySearchTree1.findMax().data); // 20
 console.log(binarySearchTree1.contains(10)); // true
@@ -376,11 +376,23 @@ console.log(binarySearchTree1.root.left.right.data); // 13
 console.log(binarySearchTree1.root.left.left.data); // 8
 console.log(binarySearchTree1.getHeight()); // 3
 console.log(binarySearchTree1.isBalanced()); // true
-console.log(binarySearchTree1.root); 
-console.log(binarySearchTree1.breadthFirstSearch()); // [ 15, 12, 20, 8, 13 ]
-console.log(binarySearchTree1.depthFirstSearchPreOrder()); // [ 15, 12, 8, 13, 20 ]
-console.log(binarySearchTree1.depthFirstSearchPostOrder()); // [ 8, 13, 12, 20, 15 ]
-console.log(binarySearchTree1.depthFirstSearchInOrder()); // [ 8, 12, 13, 15, 20 ]
+console.log(binarySearchTree1.root);// {
+                                  //   data: 15,
+                                  //   left: BinarySearchTreeNode {
+                                  //     data: 12,
+                                  //     left: BinarySearchTreeNode { data: 8, left: null, right: null },
+                                  //     right: BinarySearchTreeNode { data: 13, left: null, right: null }
+                                  //   },
+                                  //   right: BinarySearchTreeNode {
+                                  //     data: 20,
+                                  //     left: BinarySearchTreeNode { data: 18, left: null, right: null },
+                                  //     right: BinarySearchTreeNode { data: 25, left: null, right: null }
+                                  //   }
+                                  // }
+console.log(binarySearchTree1.breadthFirstSearch()); // [ 15, 12, 20, 8, 13, 18, 25 ]
+console.log(binarySearchTree1.depthFirstSearchPreOrder()); // [ 15, 12, 8, 13, 20, 18, 25 ]
+console.log(binarySearchTree1.depthFirstSearchPostOrder()); // [ 8, 13, 12, 18, 25, 20, 15 ]
+console.log(binarySearchTree1.depthFirstSearchInOrder()); // [ 8, 12, 13, 15, 18, 20, 25 ]
 
 const binarySearchTree2 = new BinarySearchTree();
 binarySearchTree2.insert(22).insert(49).insert(85).insert(66).insert(95).insert(90).insert(100).insert(88).insert(93).insert(89);
