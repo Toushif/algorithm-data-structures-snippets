@@ -1,4 +1,4 @@
-Function.prototype.bind = function (obj) {
+Function.prototype.binds = function (obj) {
     let func = this;
     let additionalArgs = [].slice.call(arguments, 1);
     let args = arguments;
@@ -30,4 +30,5 @@ store2 = { bb: "Boris" };
 
 cc = store.aa;
 
-cc.bind(store2, "Hey")(); //”Hey Boris”
+console.log(cc.binds(store2, "Hey")()); //”Hey Boris”
+console.log(cc.binds(store2)("Hey")); //”Hey Boris”

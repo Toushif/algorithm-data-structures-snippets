@@ -20,4 +20,5 @@ function balancedParanthesis(string) {
     }, 0);
 }
 
-balancedParanthesis("(())");
+console.log(balancedParanthesis("(())(")); //false
+console.log(balancedParanthesis("(())")); //true
