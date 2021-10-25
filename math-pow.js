@@ -23,3 +23,37 @@ function power(x, y) {
     if (y % 2 == 0) return temp * temp;
     else return x * temp * temp;
 }
+
+// extend the pow function to work for negative y and float x.
+// Time Complexity: O(log|n|)
+// Auxiliary Space: O(1)
+function power(x, y) {
+    var temp;
+
+    if (y == 0) return 1;
+
+    temp = power(x, parseInt(y / 2));
+
+    if (y % 2 == 0) return temp * temp;
+    else {
+        if (y > 0) return x * temp * temp;
+        else return (temp * temp) / x;
+    }
+}
+
+// Using recursion
+// Time Complexity: O(n)
+// Auxiliary Space: O(1)
+function power(x, y) {
+    // If x^0 return 1
+    if (y == 0) return 1;
+
+    // If we need to find of 0^y
+    if (x == 0) return 0;
+
+    // For all other cases
+    return x * power(x, y - 1);
+}
+
+
+console.log(power(7, 3)); // 343
