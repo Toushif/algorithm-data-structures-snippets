@@ -9,7 +9,7 @@
 // Time complexity - O(n)
 // Space complexity - O(n)
 function maxArrAvg(arr, k) {
-    function calcMax(subArr) {
+    function arrAvg(subArr) {
         const total = subArr.reduce((pre, val) => {
             return pre + val;
         }, 0);
@@ -20,11 +20,10 @@ function maxArrAvg(arr, k) {
     for (let i = 0; i < k; i++) {
         store.push(arr[i]);
     }
-    let max = calcMax(store);
+    let max = arrAvg(store);
     for (let i = k; i < arr.length; i++) {
-        //let ori = calcMax(store.slice(i-k));
         store.push(arr[i]);
-        let next = calcMax(store.slice(i - k + 1));
+        let next = arrAvg(store.slice(i - k + 1));
         if (max < next) {
             max = next;
         }
