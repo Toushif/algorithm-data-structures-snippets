@@ -17,3 +17,9 @@ function reverse(s) {
 function reverse(str) {
     return str.split("").reduce((rev, char) => char + rev, "");
 }
+
+// Using recursion
+function reverse(str) {
+    if (str.length === 1) return str;
+    return reverse(str.slice(1)) + str[0];
+}
