@@ -17,7 +17,7 @@ function getDigit(num, ind) {
 }
 
 // Digit count
-function getDigit(num, ind) {
+function getDigitCount(num, ind) {
     return Math.floor(Math.log10(Math.abs(num))) + 1
 }
 
