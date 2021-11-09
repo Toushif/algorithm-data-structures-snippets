@@ -86,3 +86,4 @@ function hash(inputStr, subStrLength) {
 }
 
 console.log(hash('-+*++-*++-', 2)); // *++--+
+console.log(hash('*+-*--', 3)); // *--*+-
