@@ -55,5 +55,4 @@ function power(x, y) {
     return x * power(x, y - 1);
 }
 
-
 console.log(power(7, 3)); // 343
