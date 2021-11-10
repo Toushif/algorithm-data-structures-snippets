@@ -20,5 +20,33 @@ function balancedParanthesis(string) {
     }, 0);
 }
 
+function validParenthesis(str) {
+    
+    const obj = str.split('').reduce((p, v) => {
+        if(v === '[' || v === '(' || v === '{') {
+            if(!(v in p) || p[v] > -1) {
+                p[v] = v in p ? ++p[v] : 1
+            }
+        }
+        if(v === ']') {
+            p['['] = '[' in p ? --p['['] : -1
+        }
+        if(v === ')') {
+            p['('] = '(' in p ? --p['('] : -1
+        }
+        if(v === '}') {
+            p['{'] = '{' in p ? --p['{'] : -1
+        }
+        return p;
+    }, {})
+
+    const sum = Object.values(obj).reduce((p,v) => p+v,0);
+    return !sum;
+}
+
 console.log(balancedParanthesis("(())(")); //false
 console.log(balancedParanthesis("(())")); //true
+
+console.log(validParenthesis("[[]]([])[]")); //true
+console.log(validParenthesis("(((}}))")); //false
+console.log(validParenthesis("())(()")); //false
