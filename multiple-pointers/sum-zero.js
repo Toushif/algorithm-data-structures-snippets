@@ -1,6 +1,6 @@
 //Write an algorithm which will have a function called sumZero, which accepts a SORTED array of integers.
 // The function should find the first pair where the sum is zero. Return an array with both the values
-// if the sum is zero or return undefied if not found.
+// if the sum is zero or return undefined if not found.
 
 // My solution -> time complexity O(n)
 function sumZero(arr) {
