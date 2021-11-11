@@ -20,6 +20,6 @@ debounce = (func, delay) => {
 button.addEventListener(
     "click",
     debounce(function () {
-        console.log("Hello\nNo matter how many times you");
+        console.log("Hello\nNo matter how many times you call");
     }, 3000)
 );

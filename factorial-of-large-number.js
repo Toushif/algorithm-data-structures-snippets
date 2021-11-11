@@ -14,4 +14,4 @@ function factorial(num) {
   return result.reverse().join('');
 }
 
-console.log(factorial(10000));
+console.log(factorial(1000));

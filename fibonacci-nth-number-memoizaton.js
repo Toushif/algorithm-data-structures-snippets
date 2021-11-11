@@ -11,4 +11,4 @@ function fibonacci(n, store = {}) {
     return store[n]
 }
 
-console.log(fibonacci(200))
+console.log(fibonacci(50))
