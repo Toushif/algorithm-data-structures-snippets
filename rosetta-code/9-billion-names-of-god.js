@@ -28,6 +28,7 @@ function numberOfNamesTD(num) {
 }
 
 console.log(numberOfNamesTD(123)); // 2552338241
+console.log(numberOfNamesTD(10)); // 42
 
 function numberOfNamesBU(num) {
     const values = Array.from({ length: num }, (e, i) => i + 1);
