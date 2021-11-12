@@ -82,6 +82,11 @@ console.log(
     })
 ); // [ 'Garfield', 'LilBub', 'Blue', 'Grumpy' ]
 
+// Sorting the string normally
+console.log(
+    mergeSort(["LilBub", "Garfield", "Blue", "Grumpy"], (a, b) => a.localeCompare(b))
+); // [ 'Blue', 'Garfield', 'Grumpy', 'LilBub' ]
+
 const moarKittyData = [
     {
         name: "LilBub",
