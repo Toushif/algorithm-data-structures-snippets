@@ -29,8 +29,9 @@
 // if the number of students becomes more than m, then the solution is not feasible. Else feasible.
 
 // method to find minimum pages
-function findPages(arr, n, m) {
+function findPages(arr, m) {
     let sum = 0;
+    const n = arr.length;
 
     // return -1 if no. of books is less than
     // no. of students
@@ -104,3 +105,5 @@ function isPossible(arr, n, m, curr_min) {
 // Driver Method
 let arr = [12, 34, 67, 90];
 let m = 2; //No. of students
+
+console.log(findPages(arr, m));

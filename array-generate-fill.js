@@ -17,3 +17,6 @@ Array.apply(null, {length: 100}).map(Math.random)
 
 // Same as above
 Array(10).fill().map(Function.call, Math.random)
+
+Array.from({ length: 10 }, (e, i) => i + 1) //[1,2,3,4,5,6,7,8,9,10]
+Array.from({ length: 10 }, () => []) // [[],[],[],[],[]....] 10 empty arrays created
