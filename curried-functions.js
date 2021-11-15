@@ -137,3 +137,26 @@ console.log(curriedChallenge("John", "Sam", "chess"));
 console.log(curriedChallenge("John")("Sam")("chess"));
 console.log(curriedChallenge("John", "Sam")("chess"));
 console.log(curriedChallenge("John")("Sam", "chess"));
+
+
+//compute(10).add(20).mul(30)
+
+function compute(num) {
+	if(!(this instanceof compute)) {
+  	return new compute(num)
+  }
+	this.num = num;
+  
+  this.add = function(addNum) {
+  	this.num = this.num + addNum
+    return this;
+  }
+  
+  this.mul = function(mulNum) {
+  	this.num = this.num * mulNum
+    return this.num;
+  }
+}
+
+console.log(compute(10).add(20).mul(30))
+
