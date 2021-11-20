@@ -7,6 +7,10 @@ function onlyCons(a) {
     if (this.constructor !== onlyCons) { //OR, this instanceof onlyCons
         throw "Cannot call as a function";
     }
+    // OR
+    // if (!(this instanceof onlyCons)) {
+    //     throw "Cannot call as a function";
+    // }
 
     this.a = a;
 }
