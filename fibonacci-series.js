@@ -30,3 +30,32 @@ function fibonacci(n) {
 }
 
 console.log(fibonacci(20));
+
+
+// fibonacci numbers one by one
+
+function createFebClosure() {
+    var num = 0;
+    var next = 1;
+
+    return function() {
+        let store = num;
+        let temp = num + next;
+        num = next;
+        next = temp
+
+        return store;
+    }
+}
+
+var nextFeb = createFebClosure();
+
+//output
+console.log(nextFeb()); // 0
+console.log(nextFeb()); // 1
+console.log(nextFeb()); // 1
+console.log(nextFeb()); // 2
+console.log(nextFeb()); // 3
+console.log(nextFeb()); // 5
+console.log(nextFeb()); // 8
+console.log(nextFeb()); // 13
