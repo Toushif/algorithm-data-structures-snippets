@@ -104,3 +104,8 @@ var copyBobBtn = document.querySelector(".js-copy-btn"); //sample button to copy
 copyBobBtn.addEventListener("click", function (event) {
     copyTextToClipboard("Sample Text");
 });
+
+// for pasting code - Try executing this in your browser dev tools, but then quickly copy something from outside devtools from the web page withing 5 seconds after executing the below code
+setTimeout(async ()=> {
+    console.log(await navigator.clipboard.readText())
+}, 5000)
