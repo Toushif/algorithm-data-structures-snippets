@@ -18,19 +18,3 @@
 // //Here in the above function, we do not allow the function to be invoked normally.
 // //Such functions are constructor functions. We can only create objects using these functions.
 // onlyCons()
-
-
-function solve() {
-    let i =0;
-    let sum =0;
-    while(i<100){
-        sum = sum+i;
-        sum=i+sum;
-        i++
-    }
-    console.log(sum)
-}
-
-solve()
-
-console.log(200%4000)
