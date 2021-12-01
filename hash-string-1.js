@@ -67,6 +67,7 @@ function hash(inputStr, subStrLength) {
     const storeArr = [];
     const obj = {};
     for (let i = 0; i < inputStr.length; i += subStrLength) {
+        // const ele = inputStr.substr(i, subStrLength); //shortcut - preferred way
         const ele = inputStr
             .split("")
             .slice(i, i + subStrLength)
