@@ -77,8 +77,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Native lazy loading of images -
 // Just use the loading attribute with lazy value
-{/* <img src="example.jpg" loading="lazy" alt="..." />
-<iframe src="example.html" loading="lazy"></iframe> */}
+/* <img src="example.jpg" loading="lazy" alt="..." />
+<iframe src="example.html" loading="lazy"></iframe> */
 
 // The following values are supported by the loading attribute:
 
