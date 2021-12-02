@@ -20,6 +20,7 @@ function balancedParanthesis(string) {
     }, 0);
 }
 
+// Balanced paranthesis - ith other parenthesis as well
 function validParenthesis(str) {
     
     const obj = str.split('').reduce((p, v) => {
