@@ -20,7 +20,7 @@ function balancedParanthesis(string) {
     }, 0);
 }
 
-// Balanced paranthesis - ith other parenthesis as well
+// Balanced paranthesis - with other brackets as well - interview questions
 function validParenthesis(str) {
     
     const obj = str.split('').reduce((p, v) => {
