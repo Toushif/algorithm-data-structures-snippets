@@ -1,5 +1,7 @@
 // Bubble Sort
 // Bubble sort is an O(n^2) algorithm.
+// Best time complexity - O(n) - if it is already sorted
+// Average and worst time complexity - O(n^2)
 
 function bubbleSort(arr) {
     let swap;
