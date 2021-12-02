@@ -2,7 +2,7 @@
 // Quick sort is an O(n * log(n)) algorithm (Worst case - O(n^2).
 // Pivot may not always be the first element, coz if the array is nearly sorted then selecting
 // first item as the pivot will give the worst time complexity of O(n^2)
-// So, always select a random pivot from the array when beginning pr try and pick the middle element everytime
+// So, always select a random pivot from the array when beginning. Try and pick the middle element everytime
 // if you use Quick Sort. But in any case we cannot avoid the worst case entirely.
 
 function pivot(arr, start = 0, end = arr.length - 1) {
