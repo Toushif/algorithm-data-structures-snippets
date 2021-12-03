@@ -24,3 +24,12 @@ function isPalindrom(s) {
     }
     return c;
 }
+
+// Another way-
+function isPalindrome2(str) {
+  str = str.replace(/\W/g, '').toLowerCase();
+  return str === [...str].reverse().join('');
+}
+
+console.log(isPalindrome2("amanaplanacanalpanama")); // true
+console.log(isPalindrome2("A car, a man, a maraca"));  // true
