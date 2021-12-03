@@ -4,12 +4,23 @@
 // Otherwise it returns false.
 
 function isPalindrome(str) {
-  if (!str.length) return true;
+    if (!str.length) return true;
 
-  if (str[0] !== str[str.length - 1]) return false;
+    if (str[0] !== str[str.length - 1]) return false;
 
-  return isPalindrome(str.slice(1, -1));
+    return isPalindrome(str.slice(1, -1));
 }
 
-console.log(isPalindrome('amanaplanacanalpanama')); // true
-console.log(isPalindrome('amanaplanacanalpandemonium')); // false
+console.log(isPalindrome("amanaplanacanalpanama")); // true
+console.log(isPalindrome("amanaplanacanalpandemonium")); // false
+
+// Conventional method
+function isPalindrom(s) {
+    let c = true;
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] !== s[s.length - 1 - i] && i < s.length - 1 - i) {
+            c = false;
+        }
+    }
+    return c;
+}
