@@ -1,4 +1,4 @@
-// what will be the output of the following -
+// What will be the output of the following -
 
 var arr1 = "john".split("");
 var arr2 = arr1.reverse();
