@@ -43,21 +43,21 @@ function mostDigits(nums) {
 
 function radixSort(nums) {
     const end = mostDigits(nums);
+    let arrClone = nums.slice(0);
 
     for (let i = 0; i < end; i++) {
         const helperArr = Array.from({ length: 10 }, () => []);
 
-        for (const num of nums) {
+        for (const num of arrClone) {
             // console.log('check', helperArr)
             helperArr[getDigit(num, i)].push(num);
             // console.log('check 2', helperArr)
         }
 
-        nums = [].concat(...helperArr);
-        // console.log('check 3', nums)
+        arrClone = [].concat(...helperArr);
     }
-
-    return nums;
+    console.log('HIha', arrClone, nums)
+    return arrClone;
 }
 
 console.log(radixSort([8, 6, 1, 12])); // [1, 6, 8, 12]
