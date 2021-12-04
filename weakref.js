@@ -1,5 +1,8 @@
 // Example of a WeakRef from MDN docs
+// A WeakRef object lets you hold a weak reference to another object, without preventing that object from getting garbage-collected.
+// A WeakRef object contains a weak reference to an object, which is called its target or referent. A weak reference to an object is a reference that does not prevent the object from being reclaimed by the garbage collector. In contrast, a normal (or strong) reference keeps an object in memory. When an object no longer has any strong references to it, the JavaScript engine's garbage collector may destroy the object and reclaim its memory. If that happens, you can't get the object from a weak reference anymore.
 
+// This example starts a counter shown in a DOM element, stopping when the element doesn't exist anymore:
 class Counter {
     constructor(element) {
         // Remember a weak reference to the DOM element
