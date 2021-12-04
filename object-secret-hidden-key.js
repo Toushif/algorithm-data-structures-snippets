@@ -1,5 +1,5 @@
 // https://stackoverflow.com/questions/2636453/is-it-possible-to-create-a-hidden-property-in-javascript
-// If you want to create an Object in SJ and dont want its property to be accessible by normal access by value accessor method (using sqaure brackets), use Symbol data type to create unique key and use defineProperty to make it non enumerable and assig a value to the key.
+// If you want to create an Object in JS and dont want its property to be accessible by normal access by value accessor method (using sqaure brackets), use Symbol data type to create unique key and use defineProperty to make it non enumerable and assig a value to the key.
 
 // In ES6, it's possible to make properties with keys of a new primitive type -- symbol. This type is used by Javascript itself to enumerate an object using a for ... of loop.
 
