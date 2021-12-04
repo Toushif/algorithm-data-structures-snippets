@@ -20,3 +20,7 @@ Array(10).fill().map(Function.call, Math.random)
 
 Array.from({ length: 10 }, (e, i) => i + 1) //[1,2,3,4,5,6,7,8,9,10]
 Array.from({ length: 10 }, () => []) // [[],[],[],[],[]....] 10 empty arrays created
+
+const arr = [[],[],[],[1,2,3,4,5,[1,2,3],[]],[],[1,2,3,[5,6,7]]];
+const res = arr.flat(2).flatMap(v=>[v*2])
+console.log(res)
