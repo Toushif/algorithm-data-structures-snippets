@@ -24,3 +24,6 @@ Array.from({ length: 10 }, () => []) // [[],[],[],[],[]....] 10 empty arrays cre
 const arr = [[],[],[],[1,2,3,4,5,[1,2,3],[]],[],[1,2,3,[5,6,7]]];
 const res = arr.flat(2).flatMap(v=>[v*2])
 console.log(res)
+
+// Note: flatMap() can be used to flatten an array of depth of 1 only, as internally it calls a map function followed by flat function with a depth of 1.
+// But flat ca be called with any depth
