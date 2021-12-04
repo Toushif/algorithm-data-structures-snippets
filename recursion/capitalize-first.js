@@ -10,6 +10,7 @@ function capitalizeFirst(arr) {
   result.push(arr[0][0].toUpperCase() + arr[0].slice(1));
 
   return result.concat(capitalizeFirst(arr.slice(1)));
+  // return [...result, ...capitalizeFirst(arr.slice(1))]; //You can write like this also
 }
 
 console.log(capitalizeFirst(['car', 'taco', 'banana'])); // ['Car','Taco','Banana']
