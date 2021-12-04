@@ -37,3 +37,5 @@ Vehicle.prototype = bike; //Now Bike treats as a parent of Vehicle.
 var vehicle = new Vehicle("Shine", 70000);
 
 console.log(vehicle.getCompany() + " " + vehicle.name + " " + vehicle.price) // Honda Shine 70000
+
+// Read 4. Using Constructors Enables the Deceptive `instanceof` in https://medium.com/javascript-scene/javascript-factory-functions-vs-constructor-functions-vs-classes-2f22ceddf33e#.m5h2jj8a7
