@@ -160,3 +160,7 @@ function compute(num) {
 
 console.log(compute(10).add(20).mul(30))
 
+
+// Sum of N numbers recursively - 
+const sum = a => b => b ? sum(a+b) : a;
+console.log(sum(1)(2)(3)(4)(5)())
