@@ -32,3 +32,5 @@ function pascal(A) {
     }
     return arr;
 }
+
+console.log(pascal(5))
