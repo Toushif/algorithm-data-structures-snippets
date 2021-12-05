@@ -5,14 +5,14 @@
 function encode(str) {
     let arr = []
     let k = 0
-    for(let j = 0; j < str.length; j+=k) {
+    for(let a = 0; a < str.length; a+=k) {
         let counter = 0
-        for(let i = j; i < str.length; i++) {
+        for(let b = a; b < str.length; b++) {
             counter++
-            if(str[j] !== str[i+1] || (i+1 === str.length-1 && str[j] === str[i+1])) {
-                if(i+1 === str.length-1 && str[j] === str[i+1]) counter +=1
+            if(str[a] !== str[b+1] || (b+1 === str.length-1 && str[a] === str[b+1])) {
+                if(b+1 === str.length-1 && str[a] === str[b+1]) counter +=1
                 k = counter
-                arr.push([counter, str[j]])
+                arr.push([counter, str[a]])
                 break;
             }
         }
