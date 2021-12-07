@@ -10,3 +10,10 @@ let regex4 = /\w/g // The \w metacharacter matches word characters. A word chara
 console.log(regex3.test('8643768375')) // true
 console.log(regex3.test('8643768375m')) // false
 
+
+// match method
+let text = "The rain in SPAIN stays mainly in the plain";
+text.match(/ain/gi); // ['ain','AIN','ain','ain'] global case insensitive regex
+// The match() method searches a string for a match against a regular expression
+// The match() method returns the matches in an array.
+// The match() method returns null if no match is found.
