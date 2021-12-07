@@ -29,7 +29,6 @@ function validAnagram(str1, str2) {
     return true;
 }
 
-
 //More optimized solution
 function validAnagram(word1, word2) {
     if (word1.length !== word2.length) return false;
@@ -52,3 +51,20 @@ console.log(validAnagram("", "")); //true
 console.log(validAnagram("Toushif", "fishout")); //true
 console.log(validAnagram("anagram", "nagaram")); // true
 console.log(validAnagram("rat", "car")); // false
+
+// Another version of anagrams where the secomd string might contain an special characters as well -
+
+function anagram(str1, str2) {
+    const obj = {};
+    const store = str1.toLowerCase();
+    for (let s of store) {
+        obj[s] = obj[s] ? ++obj[s] : 1;
+    }
+    for (let i = 0; i < str2.toLowerCase().length; i++) {
+        if (obj[str2[i]]) obj[str2[i]]--;
+    }
+    return !Object.values(obj).reduce((a, b) => a + b, 0);
+}
+
+console.log(anagram('elbow', 'below')) // true
+console.log(anagram('Dormitory', 'dirty rom##')) // true
