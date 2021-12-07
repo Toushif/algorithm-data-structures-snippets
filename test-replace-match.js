@@ -1,3 +1,4 @@
+// replace
 'Toushif099080543.hgu34tc34t.34543t'.replace(/[a-z]/g, '') // 'T099080543.3434.34543'
 
 
