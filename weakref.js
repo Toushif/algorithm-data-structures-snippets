@@ -43,14 +43,14 @@ class Counter {
 }
 
 counterr = document.createElement("div");
-counterr.id = "counterrr";
+counterr.id = "counterId";
 counterr.style.width = "200px";
 counterr.style.height = "200px";
 counterr.style.background = "yellow";
 counterr.style.fontSize = "24px";
 document.body.insertBefore(counterr, document.body.firstElementChild);
 
-const counter = new Counter(document.getElementById("counterrr"));
+const counter = new Counter(document.getElementById("counterId"));
 setTimeout(() => {
-    document.getElementById("counterrr").remove();
+    document.getElementById("counterId").remove();
 }, 5000);
