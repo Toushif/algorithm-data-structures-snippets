@@ -100,24 +100,16 @@ const testingTeam = {
 
 const engineeringTeam = {
     Size: 3,
-
     Department: "Engineering",
-
     Lead: "Jill",
-
     Manager: "Alex",
-
     Engineer: "Dave",
-
     TestingTeam,
 
     [Symbol.Iterator]: function* () {
         yield team.lead;
-
         yield team.manager;
-
         yield team.engineer;
-
         yield* team.testingTeam;
     },
 };
