@@ -68,28 +68,28 @@ console.log(names); // [JIll, ALex, Dave, Amanda, Bill]
 // Now refactoring the above code using Symbol.Iterator-
 
 const testingTeam = {
-    Lead: "Amanda",
-    Tester: "Bill",
+    lead: "Amanda",
+    tester: "Bill",
 
-    [Symbol.Iterator]: function* () {
+    [Symbol.iterator]: function* () {
         yield this.lead;
         yield this.tester;
     },
 };
 
 const engineeringTeam = {
-    Size: 3,
-    Department: "Engineering",
-    Lead: "Jill",
-    Manager: "Alex",
-    Engineer: "Dave",
-    TestingTeam,
+    size: 3,
+    department: "Engineering",
+    lead: "Jill",
+    manager: "Alex",
+    engineer: "Dave",
+    testingTeam,
 
-    [Symbol.Iterator]: function* () {
-        yield team.lead;
-        yield team.manager;
-        yield team.engineer;
-        yield* team.testingTeam;
+    *[Symbol.iterator]() {
+        yield this.lead;
+        yield this.manager;
+        yield this.engineer;
+        yield* this.testingTeam;
     },
 };
 
