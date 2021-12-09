@@ -108,7 +108,6 @@ console.log(names); // [JIll, ALex, Dave, Amanda, Bill]
 class Comment {
     constructor(content, children) {
         this.content = content;
-
         this.children = children;
     }
 
