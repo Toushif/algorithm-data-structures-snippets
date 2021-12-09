@@ -1,12 +1,8 @@
 const engineeringTeam = {
     Size: 3,
-
     Department: "Engineering",
-
     Lead: "Jill",
-
     Manager: "Alex",
-
     Engineer: "Dave",
 };
 
@@ -16,9 +12,7 @@ const engineeringTeam = {
 
 function* TeamIterator(team) {
     yield team.lead;
-
     yield team.manager;
-
     yield team.engineer;
 }
 
@@ -31,46 +25,34 @@ for (let name of TeamIterator(engineeringTeam)) {
 console.log(names); // [JIll, ALex, Dave]
 
 // So above you can see how we are using function iterables to custom iterate the object above through very particular properties.
-
 // Continuation of above example – Generator Delegation -
-
 //  From the above example now, we have a testing team as a part of the engineering team as follows -
 
 const testingTeam = {
     Lead: "Amanda",
-
     Tester: "Bill",
 };
 
 const engineeringTeam = {
     Size: 3,
-
     Department: "Engineering",
-
     Lead: "Jill",
-
     Manager: "Alex",
-
     Engineer: "Dave",
-
     testingTeam,
 };
 
 function* TeamIterator(team) {
     yield team.lead;
-
     yield team.manager;
-
     yield team.engineer;
 
     const testingTeamGenerator = TestingTeamIterator(team.testingTeam);
-
     yield* testingTeamGenerator;
 }
 
 function* TestingTeamIterator(team) {
     yield team.lead;
-
     yield team.tester;
 }
 
@@ -83,17 +65,14 @@ for (let name of TeamIterator(engineeringTeam)) {
 console.log(names); // [JIll, ALex, Dave, Amanda, Bill]
 
 // So above you can see how we are iterating an object inside another object through iterable generator functions.
-
 // Now refactoring the above code using Symbol.Iterator-
 
 const testingTeam = {
     Lead: "Amanda",
-
     Tester: "Bill",
 
     [Symbol.Iterator]: function* () {
         yield this.lead;
-
         yield this.tester;
     },
 };
