@@ -1,9 +1,9 @@
 const engineeringTeam = {
-    Size: 3,
-    Department: "Engineering",
-    Lead: "Jill",
-    Manager: "Alex",
-    Engineer: "Dave",
+    size: 3,
+    department: "Engineering",
+    lead: "Jill",
+    manager: "Alex",
+    engineer: "Dave",
 };
 
 //Here above we have an object. So, we want to iterate this object and only want the names of //people involved. We don't want size or department or other variables which aren't name. So //how to iterate this object?
@@ -29,17 +29,17 @@ console.log(names); // [JIll, ALex, Dave]
 //  From the above example now, we have a testing team as a part of the engineering team as follows -
 
 const testingTeam = {
-    Lead: "Amanda",
-    Tester: "Bill",
+    lead: "Amanda",
+    tester: "Bill"
 };
 
 const engineeringTeam = {
-    Size: 3,
-    Department: "Engineering",
-    Lead: "Jill",
-    Manager: "Alex",
-    Engineer: "Dave",
-    testingTeam,
+    size: 3,
+    department: "Engineering",
+    lead: "Jill",
+    manager: "Alex",
+    engineer: "Dave",
+    testingTeam
 };
 
 function* TeamIterator(team) {
