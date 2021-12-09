@@ -85,7 +85,7 @@ const engineeringTeam = {
     engineer: "Dave",
     testingTeam,
 
-    *[Symbol.iterator]() {
+    [Symbol.iterator]: function* () {
         yield this.lead;
         yield this.manager;
         yield this.engineer;
