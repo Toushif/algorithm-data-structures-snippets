@@ -68,10 +68,11 @@ for (const x of take(3, naturalNumbers())) {
 // 0
 // 1
 // 2
+
 take(7, naturalNumbers()); // 1 2 3 4 5 6 7
 
 // Here’s an implementation of cycled library (without the reversing functionality).
-
+// This cycled function will keep running and yield the same set of values in array running in loop again and again due to while loop set to true.
 function* cycled(iter) {
     const arrOfValues = [...iter];
     while (true) {
