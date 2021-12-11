@@ -19,6 +19,7 @@ class Queue {
     this.size = 0;
   }
 
+  // Initially first and last point to the same Object reference. Thereafter, last points to a Object reference which is the same Object reference first has at the end Object. So, any changes to last also changes the last Object in first.
   enqueue(data) {
     const newNode = new QueueNode(data);
 
