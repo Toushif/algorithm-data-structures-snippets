@@ -12,3 +12,4 @@ function fibonacci(n, store = {}) {
 }
 
 console.log(fibonacci(50))
+console.log(fibonacci(20))
