@@ -37,6 +37,11 @@ var gcd = function (a, b) {
     return gcd(b, a % b);
 };
 
+// Above solution in 1 line
+var gcd = function (a, b) {
+    return !b ? a : gcd(b, a % b);
+};
+
 console.log(gcd(60, 40));
 console.log(gcd(300, 100));
 console.log(gcd(197, 71));
