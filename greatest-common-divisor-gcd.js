@@ -15,19 +15,27 @@ function gcd(num1, num2) {
     return res;
 }
 
-// fastest way
+// another way
 function gcd(number1, number2) {
-    while(number1 != number2){
-        if(number1 > number2) {
+    while (number1 != number2) {
+        if (number1 > number2) {
             number1 -= number2;
-        }
-        else {
+        } else {
             number2 -= number1;
         }
     }
     return number1;
 }
 
-console.log(gcd(60, 40))
-console.log(gcd(300, 100))
-console.log(gcd(197, 71))
+// fastest way
+var gcd = function (a, b) {
+    if (!b) {
+        return a;
+    }
+
+    return gcd(b, a % b);
+};
+
+console.log(gcd(60, 40));
+console.log(gcd(300, 100));
+console.log(gcd(197, 71));
