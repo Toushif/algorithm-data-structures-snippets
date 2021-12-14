@@ -1,3 +1,5 @@
+// Write an algorithm to find the Greatest common divisor of two numbers
+
 function gcd(num1, num2) {
     const min = Math.min(num1, num2),
         max = num1 === min ? num2 : num1;
