@@ -43,14 +43,14 @@ var gcd = function (a, b) {
 };
 
 // Multiple arguments -
-const gcd = (...n) =>
+var gcd = (...n) =>
     n.length === 2
         ? n[1]
             ? gcd(n[1], n[0] % n[1])
             : n[0]
         : n.reduce((a, c) => (a = gcd(a, c)));
 
-        
+
 console.log(gcd(60, 40));
 console.log(gcd(300, 100));
 console.log(gcd(197, 71));
