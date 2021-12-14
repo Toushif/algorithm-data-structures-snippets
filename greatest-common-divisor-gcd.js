@@ -15,6 +15,19 @@ function gcd(num1, num2) {
     return res;
 }
 
+// fastest way
+function gcd(number1, number2) {
+    while(number1 != number2){
+        if(number1 > number2) {
+            number1 -= number2;
+        }
+        else {
+            number2 -= number1;
+        }
+    }
+    return number1;
+}
+
 console.log(gcd(60, 40))
 console.log(gcd(300, 100))
 console.log(gcd(197, 71))
