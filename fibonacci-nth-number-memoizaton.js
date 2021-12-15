@@ -11,5 +11,19 @@ function fibonacci(n, store = {}) {
     return store[n]
 }
 
+// For extremely large numbers -
+function fibonacciBigInt(n) {
+    const store = {};
+    let i = 0, first = 0n, second = 1n;
+    while(i < n) {
+        const temp = first;
+        first = second;
+        second = first + temp;
+        i++;
+    }
+    return first;
+}
+
 console.log(fibonacci(50))
-console.log(fibonacci(20))
+console.log(fibonacciBigInt(9999n))
+console.log(fibonacciBigInt(10n))
