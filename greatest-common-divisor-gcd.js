@@ -28,7 +28,7 @@ function gcd(number1, number2) {
     return number1;
 }
 
-// fastest way
+// fastest way - Euclidean Algorithm
 var gcd = function (a, b) {
     if (!b) {
         return a;
