@@ -11,7 +11,8 @@ function factorial(num) {
     }
   }
 
-  return result.reverse().join('');
+  return result.reverse().join(''); // return as string coz the result is way too large to be represented in number
+  // return +result.reverse().join(''); // return number if num is not large else the result would come as Infinity. 
 }
 
 console.log(factorial(1000));
