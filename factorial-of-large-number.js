@@ -15,3 +15,4 @@ function factorial(num) {
 }
 
 console.log(factorial(1000));
+console.log(factorial(10));
