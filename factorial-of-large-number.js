@@ -15,5 +15,6 @@ function factorial(num) {
   // return +result.reverse().join(''); // return number if num is not large else the result would come as Infinity. 
 }
 
-console.log(factorial(1000));
-console.log(factorial(10));
+// console.log(factorial(1000));
+console.log(factorial(9999));
+// console.log(factorial(10));
