@@ -54,4 +54,3 @@ var gcd = (...n) =>
 console.log(gcd(60, 40));
 console.log(gcd(300, 100));
 console.log(gcd(197, 71));
-
