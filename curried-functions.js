@@ -163,19 +163,19 @@ console.log(compute(10).add(20).mul(30))
 const calc = {
     total: 0,
     add(num) {
-        total+=num;
+        this.total+=num;
         return this;
     },
     subtract(num) {
-        total-=num;
+        this.total-=num;
         return this;        
     },
     multiply(num) {
-        total*=num;
+        this.total*=num;
         return this;
     },
     divide(num) {
-        total/=num;
+        this.total/=num;
         return this;
     }
 }
