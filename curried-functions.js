@@ -160,6 +160,14 @@ function compute(num) {
 
 console.log(compute(10).add(20).mul(30))
 
+const calc = {
+    total: 0,
+
+}
+
+const result = calc.add(10).multiply(30).msubtract(50).add(30).divide(4)
+console.log(result.total)
+
 
 // Sum of N numbers recursively (Interview questions) - 
 const sum = a => b => b ? sum(a+b) : a;
