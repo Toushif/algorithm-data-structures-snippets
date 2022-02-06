@@ -162,10 +162,25 @@ console.log(compute(10).add(20).mul(30))
 
 const calc = {
     total: 0,
-
+    add(num) {
+        total+=num;
+        return this;
+    },
+    subtract(num) {
+        total-=num;
+        return this;        
+    },
+    multiply(num) {
+        total*=num;
+        return this;
+    },
+    divide(num) {
+        total/=num;
+        return this;
+    }
 }
 
-const result = calc.add(10).multiply(30).msubtract(50).add(30).divide(4)
+const result = calc.add(10).multiply(30).subtract(50).add(30).divide(4)
 console.log(result.total)
 
 
