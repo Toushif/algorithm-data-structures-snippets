@@ -18,7 +18,7 @@ four(1)(2)(3)(4); // 10
 //another interesting applicarions
 const $ = (x) => (k) => $(k(x));
 
-const add = (x) => (y) => x + y;
+const add3 = (x) => (y) => x + y;
 
 const mult = (x) => (y) => x * y;
 
@@ -54,17 +54,17 @@ $(7)(
 
 const partial = (f, ...a) => (...b) => f(...a, ...b);
 
-const add3 = (x, y, z) => x + y + z;
+const add4 = (x, y, z) => x + y + z;
 
-partial(add3)(1, 2, 3); // 6
+partial(add4)(1, 2, 3); // 6
 
-partial(add3, 1)(2, 3); // 6
+partial(add4, 1)(2, 3); // 6
 
-partial(add3, 1, 2)(3); // 6
+partial(add4, 1, 2)(3); // 6
 
-partial(add3, 1, 2, 3)(); // 6
+partial(add4, 1, 2, 3)(); // 6
 
-partial(add3, 1, 1, 1, 1)(1, 1, 1, 1, 1); // 3
+partial(add4, 1, 1, 1, 1)(1, 1, 1, 1, 1); // 3
 
 // Write a sum method which will work properly when invoked using either syntax below.
 // console.log(sum(2,3));   // Outputs 5
