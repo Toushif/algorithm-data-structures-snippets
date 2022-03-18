@@ -70,6 +70,8 @@ partial(add4, 1, 1, 1, 1)(1, 1, 1, 1, 1); // 3
 // console.log(sum(2,3));   // Outputs 5
 // console.log(sum(2)(3));  // Outputs 5
 
+let sum = (...x) => (...y) => (x.length && x.reduce((a,b)=>a+b)) + (y.length && y.reduce((a,b)=>a+b))
+
 // METHOD 1
 function sum(x) {
     if (arguments.length == 2) {
@@ -111,6 +113,15 @@ const curry = (functionToCurry) => {
     return waitForArguments;
 };
 
+// My version-
+function curry(Fnc) {
+    return function waitingFunc(...args) {
+        return Fnc.length === args.length
+            ? Fnc(...args)
+            : (...next) => waitingFunc(...args, ...next);
+    };
+}
+
 // Very important - refer the URL
 curry = (functionToCurry, arity = functionToCurry.length) => {
     let waitForArguments = (...attrs) => {
@@ -121,15 +132,6 @@ curry = (functionToCurry, arity = functionToCurry.length) => {
 
     return waitForArguments;
 };
-
-// My version-
-function curry(Fnc) {
-    return function waitingFunc(...args) {
-        return Fnc.length === args.length
-            ? Fnc(...args)
-            : (...next) => waitingFunc(...args, ...next);
-    };
-}
 
 const curriedChallenge = curry(createChallenge);
 
