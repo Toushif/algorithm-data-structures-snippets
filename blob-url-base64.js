@@ -5,7 +5,7 @@ var blob = new Blob(["Javatpoint"], { type: "text/plain" });
 var def = new FileReader();
 def.addEventListener("loadend", function (e) {
     document.getElementById("main").innerHTML =
-        e.srcElement.result + blob.type + blob.size; //Read more aboue blob
+        e.srcElement.result + blob.type + blob.size; //Read more about blob
 });
 def.readAsText(blob);
 
