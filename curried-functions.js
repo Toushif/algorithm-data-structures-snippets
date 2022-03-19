@@ -52,7 +52,10 @@ $(7)(
 
 //Partial application
 
-const partial = (f, ...a) => (...b) => f(...a, ...b);
+const partial =
+    (f, ...a) =>
+    (...b) =>
+        f(...a, ...b);
 
 const add4 = (x, y, z) => x + y + z;
 
@@ -70,7 +73,11 @@ partial(add4, 1, 1, 1, 1)(1, 1, 1, 1, 1); // 3
 // console.log(sum(2,3));   // Outputs 5
 // console.log(sum(2)(3));  // Outputs 5
 
-let sum = (...x) => (...y) => (x.length && x.reduce((a,b)=>a+b)) + (y.length && y.reduce((a,b)=>a+b))
+let sum =
+    (...x) =>
+    (...y) =>
+        (x.length && x.reduce((a, b) => a + b)) +
+        (y.length && y.reduce((a, b) => a + b));
 
 // METHOD 1
 function sum(x) {
@@ -140,52 +147,50 @@ console.log(curriedChallenge("John")("Sam")("chess"));
 console.log(curriedChallenge("John", "Sam")("chess"));
 console.log(curriedChallenge("John")("Sam", "chess"));
 
-
 //compute(10).add(20).mul(30)
 
 function compute(num) {
-	if(!(this instanceof compute)) {
-  	return new compute(num)
-  }
-	this.num = num;
-  
-  this.add = function(addNum) {
-  	this.num = this.num + addNum
-    return this;
-  }
-  
-  this.mul = function(mulNum) {
-  	this.num = this.num * mulNum
-    return this.num;
-  }
+    if (!(this instanceof compute)) {
+        return new compute(num);
+    }
+    this.num = num;
+
+    this.add = function (addNum) {
+        this.num = this.num + addNum;
+        return this;
+    };
+
+    this.mul = function (mulNum) {
+        this.num = this.num * mulNum;
+        return this.num;
+    };
 }
 
-console.log(compute(10).add(20).mul(30))
+console.log(compute(10).add(20).mul(30));
 
 const calc = {
     total: 0,
     add(num) {
-        this.total+=num;
+        this.total += num;
         return this;
     },
     subtract(num) {
-        this.total-=num;
-        return this;        
+        this.total -= num;
+        return this;
     },
     multiply(num) {
-        this.total*=num;
+        this.total *= num;
         return this;
     },
     divide(num) {
-        this.total/=num;
+        this.total /= num;
         return this;
-    }
-}
+    },
+};
 
-const result = calc.add(10).multiply(30).subtract(50).add(30).divide(4)
-console.log(result.total)
+const result = calc.add(10).multiply(30).subtract(50).add(30).divide(4);
+console.log(result.total);
 
-
-// Sum of N numbers recursively (Interview questions) - 
-const sum = a => b => b ? sum(a+b) : a;
-console.log(sum(1)(2)(3)(4)(5)())
+// Sum of N numbers recursively (Interview questions) -
+const sum = (a) => (b) => b ? sum(a + b) : a;
+console.log(sum(1)(2)(3)(4)(5)());
