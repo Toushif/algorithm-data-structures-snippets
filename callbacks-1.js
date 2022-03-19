@@ -59,3 +59,5 @@ arr.sort(function (val1, val2) {
 });
 
 //Output: [object,object,object]     //(cabbage then banana and then apple)
+
+// Note: Just a reminder that sort function mutates the original array. So, to sort without changing the original array we need to use slice function -> arr.slice().sort()
