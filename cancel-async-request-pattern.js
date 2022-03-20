@@ -1,4 +1,5 @@
 // https://www.codetinkerer.com/2019/01/14/cancel-async-requests-pattern.html
+// Refer above example for better understanding of the pattern
 
 const cancelFetchOnReentrySync = (wrappedFunc) => {
     let currentAbort = new AbortController();
