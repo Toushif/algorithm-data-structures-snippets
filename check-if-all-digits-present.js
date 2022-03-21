@@ -14,4 +14,3 @@ function countDigits(str) {
 }
 
 console.log(countDigits("1298450376ABC")); // true
-
