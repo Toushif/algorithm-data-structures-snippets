@@ -40,9 +40,8 @@ function createFebClosure() {
 
     return function() {
         let store = num;
-        let temp = num + next;
         num = next;
-        next = temp
+        next = store + next;
 
         return store;
     }
