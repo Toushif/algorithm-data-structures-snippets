@@ -17,3 +17,11 @@ for (var i = 0; i < 5; i++) {
         }, x * 1000);
     })(i);
 }
+// OR
+for (var i = 0; i < 5; i++) {
+    setTimeout((function (i) {
+        return function() {
+             console.log(i);   
+        }
+    })(i), i * 500);
+}
