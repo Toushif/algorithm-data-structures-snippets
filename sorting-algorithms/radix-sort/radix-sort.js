@@ -27,6 +27,11 @@ function getDigit(num, i) {
     return result % 10;
 }
 
+// Shorter code
+/* function getDigit(num, i) {
+    return Math.floor(Math.abs(num) / Math.pow(10, i)) % 10;
+} */
+
 function digitCount(num) {
     return Math.abs(num).toString().length;
 }
