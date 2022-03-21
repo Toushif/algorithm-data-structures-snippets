@@ -17,10 +17,11 @@ function getDigit(num, ind) {
 }
 
 // Digit count
-function getDigitCount(num, ind) {
+function getDigitCount(num) {
     return Math.floor(Math.log10(Math.abs(num))) + 1
 }
 
 
-console.log(getDigit(4535434, 1)) //1
+console.log(getDigit(4535434, 1)) //3
 console.log(getDigit(4535434, 6)) //4
+console.log(getDigitCount(453543479)) //9
