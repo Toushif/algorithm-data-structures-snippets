@@ -50,7 +50,6 @@ var gcd = (...n) =>
             : n[0]
         : n.reduce((a, c) => (a = gcd(a, c)));
 
-
 console.log(gcd(60, 40));
 console.log(gcd(300, 100));
 console.log(gcd(197, 71));
