@@ -1,4 +1,4 @@
-// Contructor functions nd prototypical inheritence
+// Contructor functions and prototypical inheritence
 
 class Printer {
     message = "This works!";
