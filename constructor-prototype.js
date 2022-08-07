@@ -30,3 +30,6 @@ console.log("show 15", Printer.prototype.constructor) // => function Object() { 
 console.log("show 16", Printer.prototype.constructor === Object.prototype.constructor); // => true
 
 // https://stackoverflow.com/questions/17394802/traversing-prototype-chain-using-constructor-prototype
+
+
+
