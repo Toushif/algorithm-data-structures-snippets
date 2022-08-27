@@ -10,7 +10,7 @@ class Printer {
 }
 
 const p = new Printer();
-// p.showMessage();
+p.showMessage();
 console.log("show 1", p);
 console.log("show 2", p.constructor); // this is same as show 4 and show 6
 console.log("show 3", p.constructor.prototype); // same as show 5
