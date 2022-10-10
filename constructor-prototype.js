@@ -31,3 +31,4 @@ console.log("show 16", Printer.prototype.constructor === Object.prototype.constr
 
 // https://stackoverflow.com/questions/17394802/traversing-prototype-chain-using-constructor-prototype
 
+
