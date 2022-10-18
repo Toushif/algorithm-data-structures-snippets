@@ -19,7 +19,7 @@ console.log("show 5", Printer.prototype);
 console.log("show 6", Printer.prototype.constructor); // this is same as show 4 above only - constructor function
 console.log("show 7", Printer.prototype.constructor.prototype); 
 console.log("show 8", Printer instanceof Function); // true 
-console.log("show 9", p.constructor instanceof Function); // true 
+console.log("show 9", p.constructor instanceof Function); // true   
 console.log("show 11", Printer.prototype instanceof Object); // true 
 console.log("show 12", Object.getPrototypeOf(Printer.prototype) == Object.prototype); // true 
 console.log("show 13", Object.getPrototypeOf(p) === Printer.prototype); // true 
@@ -30,3 +30,4 @@ console.log("show 15", Printer.prototype.constructor) // => function Object() { 
 console.log("show 16", Printer.prototype.constructor === Object.prototype.constructor); // => true
 
 // https://stackoverflow.com/questions/17394802/traversing-prototype-chain-using-constructor-prototype
+
