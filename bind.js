@@ -33,5 +33,3 @@ cc = store.aa;
 console.log(cc.binds(store2, "Hey")()); //”Hey Boris”
 console.log(cc.binds(store2)("Hey")); //”Hey Boris”
 
-
-
