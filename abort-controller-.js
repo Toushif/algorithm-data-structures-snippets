@@ -23,4 +23,3 @@ async function fetchAPI() {
     res.then(resposnse => resposnse.json())
     .catch(err => console.log(err.message))
 }
-
