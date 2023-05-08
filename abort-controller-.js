@@ -22,4 +22,4 @@ async function fetchAPI() {
     let res = await fetch(url, { signal });
     res.then(resposnse => resposnse.json())
     .catch(err => console.log(err.message))
-}
+} 
