@@ -9,5 +9,4 @@ function alphaNumeric(arr) {
     })
     return store
 }
-
 console.log(alphaNumeric(["190ab","ui", "90AJ", "PN", "UI19"])) // [ '190ab', '90AJ', 'UI19' ]
