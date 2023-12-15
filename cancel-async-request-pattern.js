@@ -63,4 +63,3 @@ const loadData = cancelFetchOnReentry((fetch) => async (url) => {
 });
 
 // If loadData gets called again while awaiting either the fetch() or response.json() calls, an AbortError will be raised by the original request and everything works as expected.
-// 
