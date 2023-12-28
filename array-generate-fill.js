@@ -27,3 +27,4 @@ console.log(res)
 
 // Note: flatMap() can be used to flatten an array of depth of 1 only, as internally it calls a map function followed by flat function with a depth of 1.
 // But flat ca be called with any depth
+// 
