@@ -50,3 +50,4 @@ const compile = (code) =>
     `(()=>{})[${fromString("constructor")}](${fromString(code)})()`;
 const store = compile('console.log("Hello world!");');
 console.log(store);
+
