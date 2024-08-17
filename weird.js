@@ -49,4 +49,4 @@ map.C = `((()=>{})[${fromString("constructor")}](${fromString(
 const compile = (code) =>
     `(()=>{})[${fromString("constructor")}](${fromString(code)})()`;
 const store = compile('console.log("Hello world!");');
-console.log(store);
+console.log(store);/
