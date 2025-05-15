@@ -29,4 +29,3 @@ obj.method(fn, 1);
 // Hence arguments[0]() is nothing but calling fn(). Inside fn now, the scope of this function becomes the arguments array, and logging the length of arguments[] will return 2.
 
 // Hence the output will be as above.
-// 
